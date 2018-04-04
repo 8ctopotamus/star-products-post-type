@@ -10,7 +10,6 @@
 <div id="main-content">
   <div class="container">
     <div id="content-area" class="clearfix">
-      <div id="left-area">
 
         <?php if (have_posts()) : ?>
           <div class="filter-button-group">
@@ -53,7 +52,7 @@
             <h2 class="center">Not Found</h2>
             <p class="center"><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
           <?php endif; ?>
-        </div>
+
       </div>
     </div>
   </div>

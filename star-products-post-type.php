@@ -24,7 +24,7 @@ function mma_register_scripts_and_styles() {
   wp_register_script( 'main-js', plugin_dir_url( __FILE__ ) . 'js/main.js', '', '', true );
 
    // load only on this post type
-   if ( is_post_type_archive ( 'products' ) || $post->post_type == "products" ) {
+   if ( is_post_type_archive ( 'products' ) ) {
      wp_enqueue_style( 'star-products-post-type-styles');
      wp_enqueue_script('shuffle-js');
      wp_enqueue_script('main-js');

@@ -1,3 +1,8 @@
+/* get rid of Divi sidebar line */
+#main-content .container::before {
+	display: none;
+}
+
 /* Bootstrap-style columns */
 .star-plastics-shuffle-container {
   margin-bottom: 60px;
