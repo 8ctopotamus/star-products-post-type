@@ -1,10 +1,8 @@
-/* quick grid */
-.container {
-  width: 93%;
-  margin: auto;
+/* Bootstrap-style columns */
+.star-plastics-shuffle-container {
+  margin-bottom: 60px;
 }
 
-/* Bootstrap-style columns */
 .column {
   position: relative;
   float: left;
@@ -21,14 +19,24 @@
   width: 50%;
 }
 
-.star-products-sizer-element {
+.filter-button-group {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 30px;
+}
+
+.star-plastics-sizer-element {
   width: 8.33333%;
 }
 
 /* default styles so shuffle doesn't have to set them (it will if they're missing) */
-.my-shuffle {
+.star-plastics-shuffle {
   position: relative;
   overflow: hidden;
+}
+
+.picture-item figcaption a {
+  font-size: 12px;
 }
 
 /* Ensure images take up the same space when they load */
@@ -61,13 +69,37 @@
   padding-bottom: calc(28.125% - 3px);
 }
 
-img {
+.picture-item img {
   display: block;
   width: 100%;
 
   max-width: none;
   height: 100%;
   object-fit: cover;
+
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.picture-item img:hover {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.et_pb_button {
+  border-radius: 0px !important;
+}
+.et_pb_button:hover {
+  cursor: pointer;
+  color: white;
+
+}
+.et_pb_button.active {
+  background-color: #a2191b;
+  color: white;
 }
 
 /* Small reset */
@@ -81,3 +113,9 @@ figure {
   margin: 0;
   padding: 0;
 }
+/* figure:nth-child(2n){
+  margin-bottom:30px;
+}
+figure:nth-child(2n+1){
+  margin-top:30px;
+} */

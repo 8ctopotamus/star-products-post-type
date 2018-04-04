@@ -1,20 +1,29 @@
 (function () {
   var Shuffle = window.Shuffle
-  var element = document.querySelector('.star-products-shuffle-container')
-  var sizer = element.querySelector('.star-products-sizer-element')
+  var element = document.querySelector('.star-plastics-shuffle-container')
+  var sizer = element.querySelector('.star-plastics-sizer-element')
 
   var shuffleInstance = new Shuffle(element, {
     itemSelector: '.picture-item',
-    sizer: sizer // could also be a selector: '.my-sizer-element'
+    sizer: sizer // could also be a selector: '.star-plastics-sizer-element'
   })
 
-  // filter
   function filterItems(e) {
     var val = e.target.getAttribute('name')
+
+    if (e.target.classList.contains('active')) {
+      return
+    }
+
+    filters.forEach(function(el) {
+      el.classList.remove('active')
+    })
+
+    e.target.classList.add('active')
+
     if (val === 'all') {
       shuffleInstance.filter(Shuffle.ALL_ITEMS);
     } else {
-      console.log(val)
       shuffleInstance.filter([val]);
     }
   }
